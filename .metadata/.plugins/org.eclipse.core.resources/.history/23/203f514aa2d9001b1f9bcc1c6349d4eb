@@ -1,0 +1,164 @@
+package Logica;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class Herencia {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+
+		/*
+		 * Persona persona = new Persona("Ivan", "Despo", 32, "1156022482"); //
+		 * instanciamos la clase Perosna para poder // crear personas con esas
+		 * caracteristicas Persona persona1 = new Persona("Damian", "Juarez", 33,
+		 * "1156122482"); // creamos una segunda Persona
+		 * 
+		 * // imprimimos sus caracteristicas System.out.println(persona);
+		 * System.out.println("\n"); System.out.println(persona1);
+		 * 
+		 * // creamos un profesor con las caracteristicas heredadas de Persona
+		 * 
+		 * Profesor profe = new Profesor(1, "Informatica", "Ivan", "Despo", 32,
+		 * "1156022482");
+		 * 
+		 * // Imprimimos al profesor System.out.println(profe);
+		 * System.out.println("\n");
+		 * 
+		 * // creamos al aluimno con las caracteristicas heredadas de Persona
+		 * 
+		 * Alumno alumno = new Alumno("Informatica", 7, 3, "Pablo", "Despo", 16,
+		 * "1556121499");
+		 * 
+		 * // Imprimimos al alumno System.out.println(alumno);
+		 */
+
+		// creamos un registro de profesores y alumnos donde el profesor da de alta a
+		// los
+		// alumnos y les coloca sus respectivas notas
+
+		// Di de alta al profesor
+		/*
+		 * Profesor profe = new Profesor();
+		 * 
+		 * 
+		 * 
+		 * 
+		 * System.out.println("Ingrese nombre del profesor: ");
+		 * profe.setNombre(sc.next());
+		 * System.out.println("Ingrese apellido del profesor: ");
+		 * profe.setApellido(sc.next());
+		 * System.out.println("Ingrese la edad del profesor: ");
+		 * profe.setEdad(sc.nextInt());
+		 * System.out.println("Ingrese el telefono del profesor: ");
+		 * profe.setTelefono(sc.next());
+		 * System.out.println("Ingrese la matricula  del profesor: ");
+		 * profe.setMatricula(sc.nextInt());
+		 * System.out.println("Ingrese el curso al cual da de alta  al profesor: ");
+		 * profe.setCurso(sc.next());
+		 * 
+		 * 
+		 * System.out.println("los datos del profesor son:: "+ profe.getNombre()+" "+
+		 * profe.getApellido()+" "+ profe.getEdad() +" "+
+		 * profe.getMatricula()+" "+profe.getCurso());
+		 */
+
+		// di de alta al alumno
+		ArrayList<Alumno> listaDeAlumnos = new ArrayList<Alumno>();
+		Alumno[] alumno= new Alumno[3];
+		
+		
+		int cant_alum;
+		System.out.println("Cuantos alumnos va a dar de alta: ");
+		cant_alum = sc.nextInt();
+		
+		String respuesta = "no";
+
+		System.out.println("quiere cargar alumnos?");
+
+		respuesta = sc.next();
+
+		while (respuesta.equals("si")) {
+			
+			for (int i = 0; i < alumno.length; i++) {
+				
+			
+
+			System.out.println("Ingrese el nombre del alumno: ");
+			alumno[i].setNombre(sc.next());
+			System.out.println("Ingrese el apellido del alumno: ");
+			alumno[i].setApellido(sc.next());
+			System.out.println("Ingrese la edad del alumno: ");
+			alumno[i].setEdad(sc.nextInt());
+//			System.out.println("Ingrese el telefono de contacto del alumno: ");
+//			alumno.setTelefono(sc.next());
+//			System.out.println("Ingrese el curso al cual se anoto el alumno: ");
+//			alumno.setCurso(sc.next());
+//			System.out.println("Ingrese la nota del alumno: ");
+//			alumno.setNota(sc.nextInt());
+//			System.out.println("Ingrese el año que esta cursando el alumno: ");
+//			alumno.setCurso(sc.next());
+
+			
+			
+			
+
+			System.out.println("quiere seguir cargando alumnos?");
+
+			respuesta = sc.next();
+			
+			listaDeAlumnos.addAll(i, null);
+
+			}
+			
+
+		}
+
+		
+		System.out.println("Hasta aca llega bien");
+	
+		
+		for (Alumno alum_completo : listaDeAlumnos) {
+
+			System.out.println(alum_completo);
+
+//			System.out.println("Se dio de alta al alumno: "+ alumno.getNombre()+" "+ alumno.getApellido()+" "+
+//					alumno.getEdad()+" "+ alumno.getTelefono()+" "+alumno.getCurso()+" "+
+//					alumno.getNota()+" "+ alumno.getAnio_cursa());
+		}
+		
+		
+		
+		/*List<String> Listanum = new ArrayList<String>();
+		//String[] nombre_completo = new String[2];
+		
+		
+		int cant_num;
+		System.out.println("Cuantas personas va a dar de alta: ");
+		cant_num = sc.nextInt();
+		
+		for (int i = 0; i < cant_num; i++) {
+			System.out.println("Ingrese nombre: ");
+			String nombre = sc.next();
+			Listanum.add(nombre);
+			System.out.println("Ingrese apellido: ");
+			String apellido = sc.next();
+			Listanum.add(apellido);
+			
+			
+		
+			
+			
+		}
+		
+		for (String nombre_completo : Listanum) {
+			System.out.println(nombre_completo);
+			
+		}*/
+		
+
+	}
+
+}

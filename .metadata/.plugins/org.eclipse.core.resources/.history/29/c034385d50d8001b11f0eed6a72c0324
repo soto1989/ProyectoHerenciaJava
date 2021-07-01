@@ -1,0 +1,14 @@
+package Logica;
+
+public class Alumno extends Persona {
+
+	
+	private String curso;
+	private double nota;
+	private int anio_cursa;
+	public Alumno() {
+		super();
+	}
+	
+	
+}

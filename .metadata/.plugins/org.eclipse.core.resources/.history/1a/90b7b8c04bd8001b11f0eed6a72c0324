@@ -1,0 +1,25 @@
+package Logica;
+
+public class Profesor extends Persona {
+	
+	
+	private int matricula;
+	private String curso;
+	
+	
+	public Profesor() {
+		
+	}
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+
+}
